@@ -1,0 +1,23 @@
+mixin b-news(title, date)
+
+  a.b-news(href="news-item-anim.html" class!=attributes.class)
+    .b-news__title= title
+    span.b-news__date= date
+      != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic stroke-primary', iconWidth: '18', iconHeight: '20'})
+
+  // end .b-news
+  |
+  |
+
+
+mixin b-news-2(title, date)
+
+  a.b-news-2(href="news-item.html" class!=attributes.class)
+    .b-news-2__title= title
+    span.b-news-2__date= date
+      != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic stroke-primary', iconWidth: '18', iconHeight: '20'})
+
+  // end .b-news
+  |
+  |
+

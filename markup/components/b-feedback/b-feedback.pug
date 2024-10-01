@@ -1,0 +1,112 @@
+mixin b-feedback()
+
+  form.b-feedback.section-area.bg-gray-light.ui-form.needs-validation(novalidate)
+    .container
+      .row.justify-content-between
+        .col-xl-5
+          .ui-title-inner Tell us
+
+          .b-feedback__radio-group.form-group
+            .ui-label who you are
+            .ui-radio-group
+              .b-feedback__radio.custom-control.custom-radio.custom-control-inline
+                input.custom-control-input#feedbackRadioPassenger(type="radio" name="customRadio" checked)
+                label.custom-control-label(for="feedbackRadioPassenger") Passenger
+              .b-feedback__radio.custom-control.custom-radio.custom-control-inline
+                input.custom-control-input#feedbackRadioVisitor(type="radio" name="customRadio")
+                label.custom-control-label(for="feedbackRadioVisitor") Visitor
+              .b-feedback__radio.custom-control.custom-radio.custom-control-inline
+                input.custom-control-input#feedbackRadioOrganization(type="radio" name="customRadio")
+                label.custom-control-label(for="feedbackRadioOrganization") Organization
+
+          .form-group
+            .ui-input
+              input.ui-input__field.form-control.js-input#feedbackName(type="text" required value="John")
+              button.ui-input__clear.js-input-clear(type="button")
+                != pugHelpers.Icon.call(locals, {iconName: 'close', className: 'ic', iconWidth: '26', iconHeight: '26'})
+              label.ui-input__label(for="feedbackName")
+                span.ui-input__label-content What is your name
+              .invalid-feedback Field is empty
+          .form-group
+            .ui-input
+              input.ui-input__field.form-control.js-input#feedbackPhone(type="tel" required)
+              button.ui-input__clear.js-input-clear(type="button")
+                != pugHelpers.Icon.call(locals, {iconName: 'close', className: 'ic', iconWidth: '26', iconHeight: '26'})
+              label.ui-input__label(for="feedbackPhone")
+                span.ui-input__label-content Phone
+              .invalid-feedback Field is empty
+          .form-group
+            .ui-input
+              input.ui-input__field.form-control.js-input#feedbackEmail(type="email" required)
+              button.ui-input__clear.js-input-clear(type="button")
+                != pugHelpers.Icon.call(locals, {iconName: 'close', className: 'ic', iconWidth: '26', iconHeight: '26'})
+              label.ui-input__label(for="feedbackEmail")
+                span.ui-input__label-content Email
+              .invalid-feedback Field is empty
+          .row
+            .col-xl-6
+              .form-group
+                .ui-input
+                  input.ui-input__field.form-control.js-input.is-flight#feedbackFlightNumber(type="text" required)
+                  button.ui-input__clear.js-input-clear(type="button")
+                    != pugHelpers.Icon.call(locals, {iconName: 'close', className: 'ic', iconWidth: '26', iconHeight: '26'})
+                  label.ui-input__label(for="feedbackFlightNumber")
+                    span.ui-input__label-content Flight number
+                  .invalid-feedback Field is empty
+            .col-xl-6
+              .form-group
+                .ui-input
+                  label.ui-input__label(for="feedbackDate")
+                    span.ui-input__label-content Flight date
+                    != pugHelpers.Icon.call(locals, {iconName: 'date', className: 'ic ic-date fill-gray', iconWidth: '26', iconHeight: '26'})
+                  input#feedbackDate.ui-input__field.form-control.js-input.js-date(type="text" autocomplete="off"  value ="today();" required)
+                  .invalid-feedback Field is empty
+          .form-group
+            .ui-input
+              input.ui-input__field.form-control.js-input#feedbackFlight(type="text" required)
+              button.ui-input__clear.js-input-clear(type="button")
+                != pugHelpers.Icon.call(locals, {iconName: 'close', className: 'ic', iconWidth: '26', iconHeight: '26'})
+              label.ui-input__label(for="feedbackFlight")
+                span.ui-input__label-content Flight direction
+              .invalid-feedback Field is empty
+          .form-group
+            select.js-select(data-width="100%"  data-style="ui-select-2" required)
+              option(value="") Select a topic*
+              option(value="") Topic 1
+              option(value="") Topic 2
+            .invalid-feedback Field is empty
+          .form-group
+            .ui-input
+              input.ui-input__field.form-control.js-input#feedbackMessage(type="text" required)
+              button.ui-input__clear.js-input-clear(type="button")
+                != pugHelpers.Icon.call(locals, {iconName: 'close', className: 'ic', iconWidth: '26', iconHeight: '26'})
+              label.ui-input__label(for="feedbackMessage")
+                span.ui-input__label-content Message text*
+              .invalid-feedback Field is empty
+
+          button.b-feedback__submit.btn.btn-primary.btn-lg Send
+
+          .ui-form__note By indicating your personal data in the appeal and clicking on the “Submit” button,
+            |
+            |
+            a.ui-form__note-link(href="#") consent to their processing
+            | , including transfer to officials whose competence includes the issues raised in the appeal.
+
+
+        .col-xl-3.d-xl-block.d-none
+          aside.b-card-links
+            .b-card-links__item
+              .b-card-links__title Personal Information
+              a.b-card-links__info(href="#") Familiarize
+            .b-card-links__item
+              .b-card-links__title Security Policy
+              a.b-card-links__info(href="#") Familiarize
+            .b-card-links__item
+              a.b-card-links__title(href="tel:+123456789") +1 (234) 56-78-90
+              .b-card-links__info Help Desk
+
+
+  // end .b-feedback
+  |
+  |
+

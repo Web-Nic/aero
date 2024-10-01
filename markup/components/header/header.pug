@@ -1,0 +1,73 @@
+include ../navig/navig
+
+mixin header(breadcrumb)
+
+  header.header(class!=attributes.class)
+    .header-top
+      .container
+        .header-top__inner.row.justify-content-between.align-items-center
+          .col-md.col-auto
+            .header-switcher
+              input.header-switcher__input.custom-control-input#customSwitch1(type="checkbox")
+              label.header-switcher__label(for="customSwitch1")
+                span.header-switcher__item Passengers
+                span.header-switcher__check
+                span.header-switcher__item For partners
+
+          .col-auto
+            .d-lg-block.d-none
+              a.header-top__link(href="scoreboard.html") Online scoreboard
+              a.header-top__link(href="services-item.html") Airport map
+              a.header-top__link(href="feedback.html") Feedback
+              .header-top__group
+                button.header-top__btn.header-top__btn_search(type="button")
+                  != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'ic', iconWidth: '24', iconHeight: '24'})
+                button.header-top__btn.header-top__btn_accessibility(type="button")
+                  != pugHelpers.Icon.call(locals, {iconName: 'accessibility', className: 'ic', iconWidth: '20', iconHeight: '20'})
+
+                .header-language.header-top__btn.dropdown
+                  a.header-language__link.dropdown-toggle(href="#" role="button" id="dropdownLangLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    img.header-language__img.img-fluid(src="assets/media/general/language-en.svg", alt="EN")
+                    span.header-language__name EN
+
+                  .header-language__menu.dropdown-menu(aria-labelledby="dropdownLangLink")
+                    a.header-language__item.header-language__link.dropdown-item(href="#")
+                      img.header-language__img.img-fluid(src="assets/media/general/language-fr.svg", alt="FR")
+                      span.header-language__name FR
+
+            button.toggle-menu-button.navbar-toggler.d-lg-none.d-inline-block(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+              i.toggle-menu-button-icon
+                span
+                span
+                span
+                span
+                span
+                span
+
+    .header-main
+      .container
+        .row.justify-content-between
+          .col
+            a.header__logo(href="/")
+              img.img-fluid(src="assets/media/general/logo.png", alt="International Airport" loading="lazy" decoding="async")
+
+
+          .col-auto.d-lg-inline-block.d-none
+            .header-main__links
+              a.header__phone(href="tel:+1234567890") +1 (234) 56-78-90
+              a.header__phone(href="tel:+1234567890") +1 (234) 56-78-90
+              button.toggle-menu-button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation") Menu
+                i.toggle-menu-button-icon
+                  span
+                  span
+                  span
+                  span
+                  span
+                  span
+
+      .header-nav
+        +navig()
+
+  // end .header
+  |
+  |

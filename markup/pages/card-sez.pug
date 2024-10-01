@@ -1,0 +1,35 @@
+extends _template.pug
+
+include ../components/b-title-page/b-title-page
+include ../components/b-card-sez/b-card-sez
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item
+          a(href="#") seasonal schedule
+        li.breadcrumb-item.active(aria-current="page") Acapulco
+
+
+  .b-title-page
+    .b-title-page__wrap
+      .container
+        .b-title-page__inner.align-items-center
+          h1.b-title-page__name Acapulco
+
+  main.l-main
+
+    +b-card-sez()

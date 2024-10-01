@@ -1,0 +1,42 @@
+.b-services-item {
+  margin-top: 120px;
+  &__main {}
+  &__slider {
+    margin-bottom: 110px;
+    .slick-dots {
+      right: 0;
+      left: auto;
+      bottom: -55px;
+      text-align: left;
+
+      li.slick-active button:after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url("../media/general/spinner.png");
+        animation: spin .8s linear 0s infinite;
+        display: block;
+        position: absolute;
+        left: -8px;
+        top: -8px;
+      }
+    }
+  }
+  &__img {}
+  p:last-child {
+    margin-bottom: 0;
+  }
+  a[href^="tel"] {
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 40px;
+    &__slider {
+      margin-bottom: 88px;
+      .slick-dots {
+        bottom: -46px;
+      }
+    }
+  }
+}

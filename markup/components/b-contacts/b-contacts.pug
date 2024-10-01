@@ -1,0 +1,225 @@
+mixin b-contacts()
+
+  .b-contacts
+    .container
+      .ui-list-links__container
+        .ui-list-links__wrap
+          ul.ui-list-links.ui-list-links_in-header.list-unstyled
+            li.ui-list-links__item
+              a.ui-list-links__link.active(href="#") All
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Operational assistance
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Passenger service
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Government bodies
+
+
+    .b-contacts__inner.bg-gray-light
+      .container
+        section.section-contact
+          .ui-title-wrap
+            h2.ui-title Operational assistance
+          .row
+            .b-card-3.col-xl-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'click', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Police
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:911") 911
+                    .b-card-3__footer-info Emergency help
+
+            .b-card-3.col-xl-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'click', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Health center
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:911") 911
+                    .b-card-3__footer-info Emergency help
+
+
+        section.section-contact
+          .ui-title-wrap
+            h2.ui-title Passenger service
+          .row
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Reception
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="mailto:mail@airport.com") mail@airport.com
+                    .b-card-3__footer-info Email
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Information
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Ticket offices
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info 24 hours
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info 24 hours
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info 24 hours
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info 24 hours
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title VIP-lounge
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info 24 hours
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info 24 hours
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Business lounges
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Terminal No. 1
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Terminal No. 1
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Hotel
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info 24 hours
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Mother and child room
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Freight transportation
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="#") «Transterminal»
+                    .b-card-3__footer-info Company
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+
+
+        section.section-contact
+          .ui-title-wrap
+            h2.ui-title Government bodies
+          .row
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Immigration control
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Veterinary and sanitary control
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title Border control
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+123456789") +1 (234) 56-78-90
+                    .b-card-3__footer-info Around the clock
+
+            .b-card-3.b-card-3_mod-vert.col-xl-3.col-lg-6
+              .b-card-3__wrap
+                span.b-card-3__label
+                  != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                .b-card-3__title the customs post
+                .b-card-3__footer
+                  .b-card-3__footer-item
+                    a.b-card-3__footer-link(href="tel:+73472295358") +7 (347) 229-53-58
+                    .b-card-3__footer-info Around the clock
+
+  // end .b-contacts
+  |
+  |
+

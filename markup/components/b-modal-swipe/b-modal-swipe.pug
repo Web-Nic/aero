@@ -1,0 +1,18 @@
+mixin b-modal-swipe()
+
+  .ui-modal.modal.modal_full.fade#modalSwipe(tabindex="-1" role="dialog" aria-hidden="true"  data-backdrop="static")
+    .modal-dialog.modal-dialog-centered(role="document")
+      .b-modal-swipe.modal-content
+        .b-modal-swipe__inner
+          .b-modal-swipe__info
+            .b-modal-swipe__item Arrival
+            .b-modal-swipe__item Transfer and transit
+          picture
+            source(srcset="assets/media/general/swipe.webp" type="image/webp")
+            img.b-modal-swipe__img.img-fluid(src="assets/media/general/swipe.png", alt="Swipe right" loading="lazy" decoding="async")
+        button.btn.btn-primary(type="button" data-dismiss="modal") Ok, I got it
+
+  // end .b-modal-swipe
+  |
+  |
+

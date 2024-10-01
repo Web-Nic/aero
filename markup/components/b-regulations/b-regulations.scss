@@ -1,0 +1,31 @@
+.b-regulations {
+}
+
+.b-regulations-list {
+  margin-bottom: 0;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(12, 35, 64, 0.8);
+    &:hover {
+      color: #FE5000;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__link {
+      display: inline-block;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

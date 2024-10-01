@@ -1,0 +1,150 @@
+.section-bnrs {
+  padding-bottom: 120px;
+  padding-top: 20px;
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 24px;
+  }
+}
+
+.b-bnr-slider {
+  .slick-dots {
+    left: 231px;
+    bottom: auto;
+    text-align: left;
+    top: 40px;
+
+    li.slick-active button {
+      &:before {
+        background-color: $primary;
+      }
+    }
+    li button:before {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .slick-dots {
+      left: 20px;
+      top: 68px;
+    }
+  }
+}
+
+.b-bnr {
+  position: relative;
+  background-color: $main;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  &__wrap {
+    display: flex;
+    align-items: flex-end;
+    height: 310px;
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 355px;
+  }
+  &__label {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    font-family: Geometria;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 9px 15px 10px;
+  }
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    line-height: 1.25;
+    width: 100%;
+  }
+  &__title {
+    font-family: Geometria;
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 18px;
+  }
+  &__info {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 20px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &_mod-1 & {
+    &__item {
+      position: absolute;
+      top: 130px;
+      right: 315px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 20px rgba(16, 57, 139, .2), 0 0 0 40px rgba(16, 57, 139, .2);
+    }
+  }
+
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 16px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__label {
+      top: 20px;
+      left: 20px;
+    }
+    &__inner {
+      padding: 20px;
+    }
+    &__title {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    &__wrap {
+      height: 422px;
+      padding-bottom: 172px;
+    }
+    &__info {
+      font-size: 14px;
+      padding-top: 15px;
+    }
+    &__img {
+      bottom: 0;
+      top: auto;
+      width: 100%;
+      height: 160px;
+    }
+
+    &_mod-1 & {
+      &__item {
+        top: auto;
+        bottom: 120px;
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 0 10px rgba(16, 57, 139, .2), 0 0 0 20px rgba(16, 57, 139, .2);
+      }
+    }
+  }
+}

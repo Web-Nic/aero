@@ -1,0 +1,17 @@
+mixin b-newspaper(img, title)
+
+  .b-newspaper
+    picture
+      source(srcset="assets/media/content/b-newspaper/" + img + ".webp" type="image/webp")
+      img.b-newspaper__img(src="assets/media/content/b-newspaper/" + img + ".jpg" alt="image" loading="lazy" decoding="async")
+    .b-newspaper__inner
+      .b-newspaper__title= title
+      a.b-newspaper__link(href="#")
+        != pugHelpers.Icon.call(locals, {iconName: 'download', className: 'ic', iconWidth: '16', iconHeight: '18'})
+        | Download pdf, 1 MB.
+
+
+  // end .b-newspaper
+  |
+  |
+

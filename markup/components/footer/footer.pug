@@ -1,0 +1,42 @@
+mixin footer()
+  footer.footer
+    .container
+      .footer__main
+        .footer__links
+          a.footer__link(href="tel:+1234567890") +1 (234) 56-78-90
+          a.footer__link(href="tel:+1234567890") +1 (234) 56-78-90
+          a.btn.btn-secondary.btn-sm.d-md-none.d-block(href="feedback.html") Feedback
+          ul.footer-soc.list-unstyled
+            li.footer-soc__item
+              a.footer-soc__link(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'soc-fb', className: 'ic', iconWidth: '9', iconHeight: '16'})
+            li.footer-soc__item
+              a.footer-soc__link(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'soc-tw', className: 'ic', iconWidth: '16', iconHeight: '14'})
+            li.footer-soc__item
+              a.footer-soc__link(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'soc-inst', className: 'ic', iconWidth: '16', iconHeight: '16'})
+            li.footer-soc__item
+              a.footer-soc__link(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'soc-yt', className: 'ic', iconWidth: '16', iconHeight: '11'})
+
+        form.footer-search
+          input.footer-search__input.js-footer-search(type="text" placeholder="Site search")
+          .footer-search__btns
+            button.footer-search__btn.btn.btn-primary Find
+            button.footer-search__close.js-footer-search__close.btn.btn-secondary(type="reset") Close search
+
+      .copyright
+        .row.justify-content-between
+          .col-lg
+            a.copyright__callback.copyright__link.d-none.d-md-inline-block(href="feedback.html") Feedback
+            span © 2019 International Airport «Cairo»
+          .col-lg-auto
+            span Site development —
+              |
+              |
+              a.copyright__link(href="#") New Studio
+
+  // .footer
+
+

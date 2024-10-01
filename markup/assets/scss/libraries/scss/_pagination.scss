@@ -1,0 +1,103 @@
+.pagination {
+  display: flex;
+  @include list-unstyled();
+  @include border-radius();
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 0;
+  }
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 17px 19px;
+  margin-left: -$pagination-border-width;
+  line-height: 1;
+  font-size: 16px;
+  color: $pagination-color;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  &:hover {
+    z-index: 2;
+    border-color: #999999;
+    color: #666666;
+    text-decoration: none;
+    .ic {
+      fill: #666666;
+    }
+  }
+
+  &:focus {
+    z-index: 2;
+    outline: $pagination-focus-outline;
+    box-shadow: $pagination-focus-box-shadow;
+  }
+}
+
+.page-item {
+  &:first-child {
+    .page-link {
+      margin-left: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .ic-arr {
+      transform: rotate(-45deg);
+    }
+  }
+  &:last-child {
+    .page-link {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .ic-arr {
+      transform: rotate(135deg);
+    }
+  }
+
+  &.active {
+    padding-left: 17px;
+    padding-right: 17px;
+    .page-link {
+      z-index: 1;
+      border-color: #999999;
+      color: #666666;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    pointer-events: none;
+    // Opinionated: remove the "hand" cursor set previously for .page-link
+    cursor: auto;
+    background-color: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border-color;
+  }
+
+  .ic-arr {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-top: 3px solid #43B02A;
+    border-left: 3px solid #43B02A;
+    border-radius: 1px;
+    transition: all .3s;
+  }
+}
+
+
+//
+// Sizing
+//
+
+.pagination-lg {
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+}
+
+.pagination-sm {
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+}

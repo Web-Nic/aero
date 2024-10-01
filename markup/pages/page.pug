@@ -1,0 +1,64 @@
+extends _template.pug
+
+include ../components/b-title-page/b-title-page
+include ../components/b-services-item/b-services-item
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item
+          a(href="#") about
+        li.breadcrumb-item.active(aria-current="page") General information
+
+
+  main.l-main
+
+    .user-content
+      .container
+        .row
+          .col-xl-7
+            h1 General information
+            .ui-slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+              img.img-fluid(src="assets/media/content/user-content/1.jpg", alt="фото")
+              img.img-fluid(src="assets/media/content/user-content/1.jpg", alt="фото")
+              img.img-fluid(src="assets/media/content/user-content/1.jpg", alt="фото")
+
+            .lead Cairo International Airport JSC is a modern aviation complex capable of receiving all types of aircraft, has two runways and a modernized airfield.
+
+        .row
+          .col-xl-5
+            strong Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            h2 1st place in number of passengers served
+
+            p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+            p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+            h2 1st place in number of passengers served
+
+            p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+            p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            h2 1st place in number of passengers served
+
+            p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+            p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+            h2 1st place in number of passengers served
+
+            p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+            p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

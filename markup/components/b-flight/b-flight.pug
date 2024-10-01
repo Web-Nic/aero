@@ -1,0 +1,244 @@
+mixin b-flight()
+
+  .b-flight
+    .container
+      .ui-list-links__container
+        .ui-list-links__wrap
+          ul.ui-list-links.ui-list-links_in-header.list-unstyled
+            li.ui-list-links__item
+              a.ui-list-links__link.active(href="#") Flight information
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") For passengers with FEV
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Departing
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Seeing off
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Airline representative offices
+            li.ui-list-links__item.ui-list-links__item-external
+              a.ui-list-links__link(href="card-sez.html")
+                != pugHelpers.Icon.call(locals, {iconName: 'globe', className: 'ic', iconWidth: '28', iconHeight: '28'})
+                | Seasonal schedule
+
+    .b-flight__inner.section-area.bg-gray
+      .container
+        .b-flight-main
+          .b-flight-main__inner
+            .b-flight-main__item.order-last
+              .b-flight-main__title In flight
+              .b-flight-main__info Status
+            .b-flight-main__item.d-md-block.d-none
+              .b-flight-main__title February 5th
+              .b-flight-main__info Date
+            .b-flight-main__item.b-flight-main__item_mr_lg
+              .b-flight-main__title at 19:40
+              .b-flight-main__info Departure
+            .b-flight-main__item
+              .b-flight-main__title Qatar Airways
+              .b-flight-main__info Airline
+            .b-flight-main__item
+              .b-flight-main__title EN  142
+              .b-flight-main__info Flight number
+
+          .b-flight-main__footer
+            .b-flight-main__footer-title Combined flight :
+            ul.b-flight-main__list.list-unstyled
+              li.b-flight-main__list-item EN
+                span.b-flight-main__list-number 200
+              li.b-flight-main__list-item KT
+                span.b-flight-main__list-number 325
+              li.b-flight-main__list-item EN
+                span.b-flight-main__list-number 200
+              li.b-flight-main__list-item KT
+                span.b-flight-main__list-number 3245
+              li.b-flight-main__list-item EN
+                span.b-flight-main__list-number 210
+              li.b-flight-main__list-item KT
+                span.b-flight-main__list-number 325
+
+        .b-flight-list
+          .b-flight-list__item
+            span.b-flight-list__number 1
+            .b-flight-list__title To the airport
+            .b-flight-list__time 04:10
+            .b-flight-list__info Arrive
+              strong  2.5 hours
+              |  before departure to
+              strong  Terminal No. 2.
+          .b-flight-list__item
+            span.b-flight-list__number 2
+            .b-flight-list__title Registration
+            .b-flight-list__time 00:40 – 06:00
+            .b-flight-list__info
+              p The flight is operated by airlines
+                strong  LOT Polish Airlines
+                | ,
+                strong  Air Serbia.
+              p Check with your airline for check-in options.
+                |
+                |
+                a(href="#") Online registration LOT Polish Airlines,
+                |
+                |
+                a(href="#") Air Serbia online check-in.
+              p Self-check-in counters (for LOT Polish Airlines passengers)
+                strong  23-53
+          .b-flight-list__item.active
+            span.b-flight-list__number 3
+            .b-flight-list__title Landing
+            .b-flight-list__time 06:08 – 06:20
+            .b-flight-list__info Boarding gate
+              strong  Exit 2
+          .b-flight-list__item.disabled
+            span.b-flight-list__number 4
+            .b-flight-list__title Departure
+            .b-flight-list__time 06:08 – 06:20
+            .b-flight-list__info Your plane
+              strong  Boeing 737
+          .b-flight-list__item.disabled
+            span.b-flight-list__number 5
+            .b-flight-list__title Departure
+            .b-flight-list__time 06:49
+            .b-flight-list__info Travel time —
+              strong  1 hour 5 minutes
+          .b-flight-list__item.disabled
+            span.b-flight-list__number 6
+            .b-flight-list__title Arrival
+            .b-flight-list__time 08:05
+            .b-flight-list__info You arrive in the city of Paris
+
+
+  // end .b-flight
+  |
+  |
+
+
+
+mixin b-flight-cancel()
+
+  .b-flight
+    .container
+      .ui-list-links__wrap
+        ul.ui-list-links.ui-list-links_in-header.list-unstyled
+          li.ui-list-links__item
+            a.ui-list-links__link.active(href="#") Flight information
+          li.ui-list-links__item
+            a.ui-list-links__link(href="#") For passengers with FEV
+          li.ui-list-links__item
+            a.ui-list-links__link(href="#") Departing
+          li.ui-list-links__item
+            a.ui-list-links__link(href="#") Seeing off
+          li.ui-list-links__item
+            a.ui-list-links__link(href="#") Airline representative offices
+          li.ui-list-links__item.ui-list-links__item-external
+            a.ui-list-links__link(href="card-sez.html")
+              != pugHelpers.Icon.call(locals, {iconName: 'globe', className: 'ic', iconWidth: '28', iconHeight: '28'})
+              | Seasonal schedule
+
+    .b-flight__inner.section-area.bg-gray(class!=attributes.class)
+      .container
+        .b-flight-main
+          .b-flight-main__inner
+            .b-flight-main__item.order-last
+              .b-flight-main__title In flight
+              .b-flight-main__info Status
+            .b-flight-main__item
+              .b-flight-main__title February 5th
+              .b-flight-main__info Date
+            .b-flight-main__item.b-flight-main__item_mr_lg
+              .b-flight-main__title at 19:40
+              .b-flight-main__info Departure
+            .b-flight-main__item
+              .b-flight-main__title Qatar Airways
+              .b-flight-main__info Airline
+            .b-flight-main__item
+              .b-flight-main__title EN  1042
+              .b-flight-main__info Flight number
+
+          .b-flight-main__footer
+            .b-flight-main__footer-title Combined flight :
+            ul.b-flight-main__list.list-unstyled
+              li.b-flight-main__list-item EN
+                span.b-flight-main__list-number 20
+              li.b-flight-main__list-item KT
+                span.b-flight-main__list-number 35
+              li.b-flight-main__list-item EN
+                span.b-flight-main__list-number 20
+              li.b-flight-main__list-item KT
+                span.b-flight-main__list-number 25
+              li.b-flight-main__list-item EN
+                span.b-flight-main__list-number 20
+              li.b-flight-main__list-item KT
+                span.b-flight-main__list-number 32
+
+        .b-flight-list
+          .b-flight-list__item
+            span.b-flight-list__number 1
+            .b-flight-list__title To the airport
+            .b-flight-list__time 04:10
+            .b-flight-list__info Come for
+              strong  2.5 hours
+              |  before departure to
+              strong  Terminal No. 2.
+          .b-flight-list__item
+            span.b-flight-list__number 2
+            .b-flight-list__title Registration
+            .b-flight-list__time 00:40 – 06:00
+            .b-flight-list__info
+              p The flight is operated by airlines
+                strong  LOT Polish Airlines,
+                strong  Air Serbia.
+              p Check with your airline for check-in options.
+                |
+                |
+                a(href="#") LOT Polish Airlines online check-in,
+                |
+                |
+                a(href="#") Air Serbia online check-in.
+              p Self-check-in counters (for LOT Polish Airlines passengers)
+                strong  301-316
+          .b-flight-list__item
+            span.b-flight-list__number 3
+            .b-flight-list__title Landing
+            .b-flight-list__time 06:08 – 06:20
+            .b-flight-list__info Boarding gate
+              strong  Exit 2
+          .b-flight-list__item.active
+            span.b-flight-list__number 4
+            .b-flight-list__title Flight canceled
+            .b-flight-list__time —
+            .b-flight-list__info
+              p
+                strong.text-primary Flight EN 004 canceled
+                |  airline "Eurowings". Phone number to contact a representative:
+              p
+                a.b-flight-list__phone(href="tel:1234567890") +1 (234) 56-78-90<br>
+                a.b-flight-list__phone(href="tel:1234567890") +1 (234) 56-78-90<br>
+                a.b-flight-list__phone(href="tel:1234567890") +1 (234) 56-78-90<br>
+              p According to
+                |
+                |
+                a(href="#") Pol. No. 82,
+                |  you're supposed to
+                strong  hot food
+                |  and
+                strong hotel.
+          .b-flight-list__item.disabled
+            span.b-flight-list__number 5
+            .b-flight-list__title Departure
+            .b-flight-list__time 06:49
+            .b-flight-list__info Travel time —
+              strong  1 hour 5 minutes
+          .b-flight-list__item.disabled
+            span.b-flight-list__number 6
+            .b-flight-list__title Arrival
+            .b-flight-list__time 08:05
+            .b-flight-list__info You arrive in the city of Paris
+
+
+  // end .b-flight
+  |
+  |
+
+
+

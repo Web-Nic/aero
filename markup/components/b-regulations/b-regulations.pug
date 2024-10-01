@@ -1,0 +1,99 @@
+mixin b-regulations()
+
+  .b-regulations.section-area.bg-gray
+    .container
+      .row
+        .col-xl-7
+          .tab-content#faqTabContent
+            .tab-pane.fade.show.active#regulations(role="tabpanel" aria-labelledby="regulations-tab")
+              .ui-accordion.accordion#accordionRegulations
+                .ui-accordion__card.card.active
+                  .ui-accordion__header#heading1
+                    button.ui-accordion__link(type="button" data-toggle="collapse" data-target="#regulations1" aria-expanded="true" aria-controls="regulations1") Control
+                  #regulations1.collapse.show(aria-labelledby="heading1" data-parent="#accordionRegulations")
+                    .ui-accordion__body
+                      ul.b-regulations-list.list-unstyled
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Veterinary control/phytocontrol
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Inspection
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Migration control
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Border control
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Sanitary and quarantine control
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Customs control
+
+
+                .ui-accordion__card.card
+                  .ui-accordion__header#heading2
+                    button.ui-accordion__link(type="button" data-toggle="collapse" data-target="#regulations2" aria-expanded="false" aria-controls="regulations2") Passengers with disabilities
+                  #regulations2.collapse(aria-labelledby="heading2" data-parent="#accordionRegulations")
+                    .ui-accordion__body
+                      ul.b-regulations-list.list-unstyled
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+
+
+                .ui-accordion__card.card
+                  .ui-accordion__header#heading3
+                    button.ui-accordion__link(type="button" data-toggle="collapse" data-target="#regulations3" aria-expanded="false" aria-controls="regulations3") Passengers with children
+                  #regulations3.collapse(aria-labelledby="heading3" data-parent="#accordionRegulations")
+                    .ui-accordion__body
+                      ul.b-regulations-list.list-unstyled
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+
+
+                .ui-accordion__card.card
+                  .ui-accordion__header#heading4
+                    button.ui-accordion__link(type="button" data-toggle="collapse" data-target="#regulations4" aria-expanded="false" aria-controls="regulations4") Baggage
+                  #regulations4.collapse(aria-labelledby="heading4" data-parent="#accordionRegulations")
+                    .ui-accordion__body
+                      ul.b-regulations-list.list-unstyled
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+
+
+            .tab-pane.fade#help(role="tabpanel" aria-labelledby="help-tab")
+              .ui-accordion.accordion#accordionHelp
+                .ui-accordion__card.card
+                  .ui-accordion__header#heading01
+                    button.ui-accordion__link(type="button" data-toggle="collapse" data-target="#help1" aria-expanded="true" aria-controls="help1") Lost luggage
+                  #help1.collapse.show(aria-labelledby="heading01" data-parent="#accordionHelp")
+                    .ui-accordion__body
+                      ul.b-regulations-list.list-unstyled
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+
+                .ui-accordion__card.card
+                  .ui-accordion__header#heading02
+                    button.ui-accordion__link(type="button" data-toggle="collapse" data-target="#help2" aria-expanded="false" aria-controls="help1") Lost child
+                  #help2.collapse(aria-labelledby="heading02" data-parent="#accordionHelp")
+                    .ui-accordion__body
+                      ul.b-regulations-list.list-unstyled
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+                        li.b-regulations-list__item
+                          a.b-regulations-list__link(href="#") Option
+
+  // end .b-regulations
+  |
+  |
+

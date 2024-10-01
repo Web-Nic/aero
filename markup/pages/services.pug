@@ -1,0 +1,52 @@
+extends _template.pug
+
+include ../components/b-title-page/b-title-page
+include ../components/b-services/b-services
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item.active(aria-current="page") Services
+
+
+
+  .b-title-page.b-title-page_sm-bg.b-title-page_mod-c
+    .b-title-page__wrap.b-title-page__wrap_over_list.align-items-end
+      .container
+        .b-title-page__inner.align-items-end
+          .b-title-page__list-wrap
+            ul.b-title-page__list.b-title-page__list_sm.b-title-page__list_plus-filter.nav#myTab(role="tablist")
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link.active#departure-tab(data-toggle="tab" href="#departure" role="tab" aria-controls="departure" aria-selected="true") All
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link#arrival-tab(data-toggle="tab" href="#arrival" role="tab" aria-controls="arrival" aria-selected="false") Parking
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link#transfer-tab(data-toggle="tab" href="#transfer" role="tab" aria-controls="transfer" aria-selected="false") Airport Map
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link#transfer-tab(data-toggle="tab" href="#transfer" role="tab" aria-controls="transfer" aria-selected="false") VIP Services
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link#transfer-tab(data-toggle="tab" href="#transfer" role="tab" aria-controls="transfer" aria-selected="false") Food and Drinks
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link#transfer-tab(data-toggle="tab" href="#transfer" role="tab" aria-controls="transfer" aria-selected="false") Shops
+
+  .container
+    form.ui-search.ui-search_mod-a
+      != pugHelpers.Icon.call(locals, {iconName: 'search-2', className: 'ic', iconWidth: '15', iconHeight: '15'})
+      input.ui-search__input.js-search-mobile(type="text" placeholder="Search by direction")
+
+  main.l-main
+
+    +b-services()

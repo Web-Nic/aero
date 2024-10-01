@@ -1,0 +1,52 @@
+mixin b-press()
+
+  .b-press
+    .b-press__inner.section-area.bg-gray
+      .container
+
+        .tab-content#newsTabContent
+          .tab-pane.fade#news(role="tabpanel" aria-labelledby="news-tab")
+
+            .row
+              .col-xl-7
+                +b-news-2('Cairo Airport has been tested for accessibility for people with disabilities', '01 Apr. 2019')
+                +b-news-2('Cairo Airport opens direct flights to Vienna', 'Apr 01, 2019')
+                +b-news-2('Cairo Airport welcomed the first flight of Georgian Airways', 'Apr 01, 2019')
+
+            .row.align-items-center
+              .col
+                button.b-press__more.btn.btn-default(type="button") Load more
+                span.b-press__note Archive of releases from 2014
+
+
+  // end .b-press
+  |
+  |
+
+mixin b-press-news()
+
+  .b-press
+    .b-press__inner.section-area.bg-gray-light
+      .container
+
+        .tab-content#newsTabContent
+          .tab-pane.fade.show.active#news(role="tabpanel" aria-labelledby="news-tab")
+
+            .row
+              .col-xl-7
+                +b-news-2('Cairo Airport has been tested for accessibility for people with disabilities', '01 Apr. 2019')
+                +b-news-2('Cairo Airport opens direct flights to Vienna', 'Apr 01, 2019')
+                +b-news-2('Cairo Airport welcomed the first flight of Georgian Airways', 'Apr 01, 2019')
+
+            .row.align-items-center
+              .col
+                button.b-press__more.btn.btn-default(type="button") Load more
+                span.b-press__note Archive of releases from 2014
+
+
+
+
+  // end .b-press
+  |
+  |
+

@@ -1,0 +1,60 @@
+extends _template.pug
+
+include ../components/b-title-page/b-title-page
+include ../components/b-press/b-press
+include ../components/b-news/b-news
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item.active(aria-current="page") services
+
+
+  .b-title-page.b-title-page_sm-bg.b-title-page_width_lg
+    .b-title-page__wrap.b-title-page__wrap_over_list.align-items-end
+      .container
+        .b-title-page__inner.align-items-end
+          .b-title-page__list-wrap
+            ul.b-title-page__list.b-title-page__list_sm.nav#pressTab(role="tablist")
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link#news-tab(data-toggle="tab" href="#news" role="tab" aria-controls="news" aria-selected="true") News
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link Mass Media about us
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link Media contacts
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link Video
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link Photo
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link Museum
+
+  .container
+    .ui-list-links__container
+      .ui-list-links__wrap
+        ul.ui-list-links.ui-list-links_in-header.list-unstyled
+          li.ui-list-links__item
+            a.ui-list-links__link(href="#") All years
+          li.ui-list-links__item
+            a.ui-list-links__link.active(href="#") 2019
+          li.ui-list-links__item
+            a.ui-list-links__link(href="#") 2018
+          li.ui-list-links__item
+            a.ui-list-links__link(href="#") 2017
+
+  main.l-main
+
+    +b-press-news()

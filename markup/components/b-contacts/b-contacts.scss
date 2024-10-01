@@ -1,0 +1,32 @@
+.section-contact {
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+  .ui-title-wrap {
+    padding-bottom: 28px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &:not(:last-child) {
+      margin-bottom: 29px;
+    }
+    .ui-title-wrap {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.b-contacts {
+  margin-top: 76px;
+  &__inner {
+    padding-top: 75px;
+    padding-bottom: 70px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+    &__inner {
+      margin-top: 25px;
+      padding-top: 37px;
+    }
+  }
+}

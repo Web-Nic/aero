@@ -1,0 +1,44 @@
+.main-menu {
+  background-color: #FFF;
+  &__item {
+    margin-bottom: 20px;
+  }
+  &__link {
+    font-family: Geometria;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: $main;
+    &_sm {
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+
+
+  @include media-breakpoint-down(md) {
+    padding-top: 30px;
+    &__link {
+      font-size: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 23px;
+    margin-bottom: 9px;
+    &__item {
+      margin-bottom: 16px;
+    }
+    &__link {
+      &_sm {
+        font-size: 18px;
+      }
+    }
+  }
+}

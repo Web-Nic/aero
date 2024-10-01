@@ -1,0 +1,41 @@
+.b-modal-swipe {
+  text-align: center;
+  flex-flow: wrap;
+  align-content: space-around;
+  padding: 0;
+  &.modal-content {
+    background-color: transparent;
+  }
+  &__inner {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+  }
+  &__info {
+    white-space: nowrap;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 12px;
+  }
+  &__item {
+    font-family: Geometria;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-right: 16px;
+  }
+  &__wrap {
+  }
+  &__img {
+    margin: auto;
+    display: block;
+  }
+  .btn {
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+  }
+}

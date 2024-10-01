@@ -1,0 +1,58 @@
+extends _template.pug
+
+//- include ../components/b-main-slider/b-main-slider
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('', '')
+
+
+block content
+  .container
+    h1 test
+    .row.mb-3
+      .col
+        button.btn.btn-primary.btn-lg button
+      .col
+        button.btn.btn-primary button
+      .col
+        button.btn.btn-primary.btn-sm button
+    .row
+      .col
+        button.btn.btn-secondary.btn-lg button
+      .col
+        button.btn.btn-secondary button
+      .col
+        button.btn.btn-secondary.btn-sm button
+
+
+    form.needs-validation(novalidate)
+      .ui-check-group
+        .custom-control.custom-checkbox.custom-control-inline
+          input.custom-control-input#appealCheckEmail(type="checkbox" checked)
+          label.custom-control-label(for="appealCheckEmail") Point
+        .custom-control.custom-checkbox.custom-control-inline
+          input.custom-control-input#appealCheckPost(type="checkbox")
+          label.custom-control-label(for="appealCheckPost") Point
+        .custom-control.custom-checkbox.custom-control-inline
+          input.custom-control-input#appealCheckTel(type="checkbox")
+          label.custom-control-label(for="appealCheckTel") Point
+
+
+      .custom-control.custom-radio.custom-control-inline
+        input.custom-control-input#customRadio1(type="radio" name="customRadio" checked)
+        label.custom-control-label(for="customRadio1") Toggle this custom radio
+      .custom-control.custom-radio.custom-control-inline
+        input.custom-control-input#customRadio2(type="radio" name="customRadio")
+        label.custom-control-label(for="customRadio2") Or toggle this other custom radio
+
+      .form-group
+        .ui-input
+          label.ui-input__label(for="appealName")
+            span.ui-input__label-content Test
+          input.ui-input__field.form-control.js-input#appealName(type="text" required)
+          .invalid-feedback The field is empty

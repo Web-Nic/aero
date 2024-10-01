@@ -1,0 +1,124 @@
+mixin b-news-item()
+
+  article.b-news-item
+    .container
+      .row
+        .col-xl-7
+          h1.b-news-item__title Cairo Airport has been tested for accessibility for people with disabilities
+          time.b-news-item__date 12 Apr 2019
+          .b-news-item__main
+            .b-news-item__slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+              .b-news-item__img
+                img.img-fluid(src="assets/media/content/b-news/1010x677/1.jpg", alt="photo")
+              .b-news-item__img
+                img.img-fluid(src="assets/media/content/b-news/1010x677/1.jpg", alt="photo")
+              .b-news-item__img
+                img.img-fluid(src="assets/media/content/b-news/1010x677/1.jpg", alt="photo")
+
+          .lead Social activists checked the services and infrastructure of the airport, which are designed to help people with disabilities, for compliance with international standards and legal requirements.
+
+      .row
+        .col-xl-5
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+  section.section-news.section-default.bg-gray
+    .container
+      .ui-title-wrap
+        .row.align-items-baseline
+          .col-xl
+            h2.ui-title Read also
+          .col-xl-auto
+            .ui-list-links__wrap
+              ul.ui-list-links.list-unstyled
+                li.ui-list-links__item
+                  a.ui-list-links__link(href="#") Press center
+                li.ui-list-links__item.ui-list-links__item-main
+                  a.ui-list-links__link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'burger', className: 'ic', iconWidth: '20', iconHeight: '20'})
+                    | All news
+
+      .row.justify-content-between
+        .col-auto
+          +b-news('Cairo Airport passes accessibility test', 'Apr 12, 2019')
+        .col-auto
+          +b-news('Cairo Airport opens direct flights to Vienna', 'Apr 12, 2019')
+        .col-auto
+          +b-news('Cairo Airport welcomed the first flight of Georgian Airways', 'Apr 12, 2019')
+        .col-auto
+          +b-news('Cairo Airport welcomed the first flight of Georgian Airways', 'Apr 12, 2019')
+
+
+  // end .b-news-item
+  |
+  |
+
+mixin b-news-item_anim()
+
+  article.b-news-item
+    .container
+      .row
+        .col-xl-7.js-animation
+          h1.b-news-item__title Cairo Airport has been tested for accessibility for people with disabilities
+          time.b-news-item__date 12 Apr 2019
+          .b-news-item__main
+            .b-news-item__slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+              .b-news-item__img
+                img.img-fluid(src="assets/media/content/b-news/1010x677/1.jpg", alt="photo")
+              .b-news-item__img
+                img.img-fluid(src="assets/media/content/b-news/1010x677/1.jpg", alt="photo")
+              .b-news-item__img
+                img.img-fluid(src="assets/media/content/b-news/1010x677/1.jpg", alt="photo")
+
+          .lead Social activists checked the services and infrastructure of the airport, which are designed to help people with disabilities, for compliance with international standards and legal requirements.
+
+      .row
+        .col-xl-5.js-animation
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+  section.section-news.section-default.bg-gray
+    .container
+      .ui-title-wrap
+        .row.align-items-baseline
+          .col-xl
+            h2.ui-title Read also
+          .col-xl-auto
+            .ui-list-links__wrap
+              ul.ui-list-links.list-unstyled
+                li.ui-list-links__item
+                  a.ui-list-links__link(href="#") Press center
+                li.ui-list-links__item.ui-list-links__item-main
+                  a.ui-list-links__link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'burger', className: 'ic', iconWidth: '20', iconHeight: '20'})
+                    | All news
+
+      .row.justify-content-between
+        .col-auto
+          +b-news('Cairo Airport passes accessibility test', 'Apr 12, 2019')
+        .col-auto
+          +b-news('Cairo Airport opens direct flights to Vienna', 'Apr 12, 2019')
+        .col-auto
+          +b-news('Cairo Airport welcomed the first flight of Georgian Airways', 'Apr 12, 2019')
+        .col-auto
+          +b-news('Cairo Airport welcomed the first flight of Georgian Airways', 'Apr 12, 2019')
+
+
+  // end .b-news-item
+  |
+  |
+

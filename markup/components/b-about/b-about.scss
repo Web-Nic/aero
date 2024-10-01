@@ -1,0 +1,6 @@
+.b-about {
+  @include media-breakpoint-down(sm) {
+    margin-top: 52px;
+    background-color: rgba(12, 35, 64, 0.1);
+  }
+}

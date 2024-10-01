@@ -1,0 +1,63 @@
+extends _template.pug
+
+include ../components/b-title-page/b-title-page
+include ../components/b-scoreboard/b-scoreboard
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item
+          a(href="scoreboard.html") online scoreboard
+        li.breadcrumb-item.active(aria-current="page") arrival
+
+
+
+  .b-title-page.b-title-page_sm
+    .b-title-page__wrap.b-title-page__wrap_over_list.align-items-end
+      .container
+        .b-title-page__inner.align-items-end
+          .b-title-page__list-wrap
+            ul.b-title-page__list.nav
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link(href="scoreboard.html") Departure
+              li.b-title-page__item.nav-item
+                span.b-title-page__link.nav-link.active Arrival
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link(href="scoreboard_transfer.html") Transfer and transit
+
+  main.l-main
+    .b-scoreboard.bg-gray.section-area
+      .container
+        .b-scoreboard-header
+          form.b-scoreboard-header__form.ui-search-inner
+            != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'ic stroke-primary', iconWidth: '18', iconHeight: '18'})
+            input.ui-search-inner__input(type="text" placeholder="Search by flight number, city and airline")
+          .b-scoreboard-header__date
+            label.input-group.date(for="date")
+              != pugHelpers.Icon.call(locals, {iconName: 'date', className: 'ic fill-primary', iconWidth: '18', iconHeight: '18'})
+              input.ui-select.js-date#date(type="text" autocomplete="off" placeholder="today" required)
+
+
+          .b-scoreboard-header__select.d-none.d-lg-flex
+            != pugHelpers.Icon.call(locals, {iconName: 'flag', className: 'ic', iconWidth: '18', iconHeight: '18'})
+            select.js-select(data-width="100%"  data-style="ui-select")
+              option(value="") All terminals
+              option(value="") Terminal 1
+              option(value="") Terminal 2
+              option(value="") Terminal 3
+              option(value="") Terminal 4
+
+        +b-scoreboard_arrival()

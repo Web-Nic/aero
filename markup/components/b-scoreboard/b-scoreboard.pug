@@ -1,0 +1,295 @@
+mixin b-scoreboard_departure()
+  a.b-scoreboard-card(href="flight.html")
+    .b-scoreboard-card__inner
+      .b-scoreboard-card__main.row.align-items-center
+        .b-scoreboard-card__date
+          time.b-scoreboard-card__date-current.text-primary 23:35
+          time.b-scoreboard-card__date-old 23:30
+        .b-scoreboard-card__td.b-scoreboard-card__td_city
+          .b-scoreboard-card__title Paris
+          span.b-scoreboard-card__label nux
+        .b-scoreboard-card__td.b-scoreboard-card__td_flight
+          span.b-scoreboard-card__name.d-md-none Flight
+          span.b-scoreboard-card__info 5N
+            strong  54
+        .b-scoreboard-card__td.b-scoreboard-card__td_company
+          span.b-scoreboard-card__name.d-md-none Airline
+          span.b-scoreboard-card__info Qatar Airways
+        .b-scoreboard-card__td.b-scoreboard-card__td_status
+          span.b-scoreboard-card__name.d-md-none Status
+          span.b-scoreboard-card__info Arrived
+        .b-scoreboard-card__td.b-scoreboard-card__td_terminal
+          span.b-scoreboard-card__name Terminal
+          span.b-scoreboard-card__info
+            strong  1
+        .b-scoreboard-card__td.b-scoreboard-card__td_arr.d-xl-block.d-none
+          != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '12'})
+
+  a.b-scoreboard-card(href="flight.html")
+    .b-scoreboard-card__inner
+      .b-scoreboard-card__main.row.align-items-center
+        .b-scoreboard-card__date
+          time.b-scoreboard-card__date-current 23:35
+        .b-scoreboard-card__td.b-scoreboard-card__td_city
+          .b-scoreboard-card__title Vein
+          span.b-scoreboard-card__label RE
+        .b-scoreboard-card__td.b-scoreboard-card__td_flight
+          span.b-scoreboard-card__name.d-md-none Flight
+          span.b-scoreboard-card__info 5N
+            strong  54
+        .b-scoreboard-card__td.b-scoreboard-card__td_company
+          span.b-scoreboard-card__name.d-md-none Airline
+          span.b-scoreboard-card__info Eurowings
+        .b-scoreboard-card__td.b-scoreboard-card__td_status
+          span.b-scoreboard-card__name.d-md-none Status
+          span.b-scoreboard-card__info In flight
+        .b-scoreboard-card__td.b-scoreboard-card__td_terminal
+          span.b-scoreboard-card__name Terminal
+          span.b-scoreboard-card__info
+            strong  2
+        .b-scoreboard-card__td.b-scoreboard-card__td_arr.d-xl-block.d-none
+          != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '12'})
+
+      .b-scoreboard-card__footer
+        span.b-scoreboard-card__footer-title.text-primary Flight combined :
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 210
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 345
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 210
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 345
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 210
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 324
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 210
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 324
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 210
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 324
+
+  a.b-scoreboard-card(href="flight.html")
+    .b-scoreboard-card__inner
+      .b-scoreboard-card__main.row.align-items-center
+        .b-scoreboard-card__date
+          time.b-scoreboard-card__date-old.text-primary 21:00
+        .b-scoreboard-card__td.b-scoreboard-card__td_city
+          .b-scoreboard-card__title Stockholm
+          span.b-scoreboard-card__label de
+        .b-scoreboard-card__td.b-scoreboard-card__td_flight
+          span.b-scoreboard-card__name.d-md-none Flight
+          span.b-scoreboard-card__info 5N
+            strong  54
+        .b-scoreboard-card__td.b-scoreboard-card__td_company
+          span.b-scoreboard-card__name.d-md-none Airline
+          span.b-scoreboard-card__info Etihad Airways
+        .b-scoreboard-card__td.b-scoreboard-card__td_status
+          span.b-scoreboard-card__name.d-md-none Status
+          span.b-scoreboard-card__info Sent to 09:00
+        .b-scoreboard-card__td.b-scoreboard-card__td_terminal
+          span.b-scoreboard-card__name Terminal
+          span.b-scoreboard-card__info
+            strong  2
+        .b-scoreboard-card__td.b-scoreboard-card__td_arr.d-xl-block.d-none
+          != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '12'})
+
+      .b-scoreboard-card__footer
+        span.b-scoreboard-card__footer-title.text-primary Flight carried out by the airline :
+        span.b-scoreboard-card__footer-item LOT Polish Airlines
+          span.b-scoreboard-card__footer-number HW-24 23.03.19
+
+
+
+mixin b-scoreboard_arrival()
+  a.b-scoreboard-card(href="flight.html")
+    .b-scoreboard-card__inner
+      .b-scoreboard-card__main.row.align-items-center
+        .b-scoreboard-card__date
+          time.b-scoreboard-card__date-old.text-primary 21:00
+        .b-scoreboard-card__td.b-scoreboard-card__td_city
+          .b-scoreboard-card__title Stockholm
+          span.b-scoreboard-card__label de
+        .b-scoreboard-card__td.b-scoreboard-card__td_flight
+          span.b-scoreboard-card__name.d-md-none Flight
+          span.b-scoreboard-card__info 5N
+            strong  54
+        .b-scoreboard-card__td.b-scoreboard-card__td_company
+          span.b-scoreboard-card__name.d-md-none Airline
+          span.b-scoreboard-card__info Etihad Airways
+        .b-scoreboard-card__td.b-scoreboard-card__td_status
+          span.b-scoreboard-card__name.d-md-none Status
+          span.b-scoreboard-card__info Sent to 09:00
+        .b-scoreboard-card__td.b-scoreboard-card__td_terminal
+          span.b-scoreboard-card__name Terminal
+          span.b-scoreboard-card__info
+            strong  2
+        .b-scoreboard-card__td.b-scoreboard-card__td_arr.d-xl-block.d-none
+          != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '12'})
+
+      .b-scoreboard-card__footer
+        span.b-scoreboard-card__footer-title.text-primary Flight carried out by the airline :
+        span.b-scoreboard-card__footer-item LOT Polish Airlines
+          span.b-scoreboard-card__footer-number HY-24 23.03.19
+  a.b-scoreboard-card(href="flight.html")
+    .b-scoreboard-card__inner
+      .b-scoreboard-card__main.row.align-items-center
+        .b-scoreboard-card__date
+          time.b-scoreboard-card__date-current.text-primary 23:35
+          time.b-scoreboard-card__date-old 23:30
+        .b-scoreboard-card__td.b-scoreboard-card__td_city
+          .b-scoreboard-card__title Vein
+          span.b-scoreboard-card__label nux
+        .b-scoreboard-card__td.b-scoreboard-card__td_flight
+          span.b-scoreboard-card__name.d-md-none Flight
+          span.b-scoreboard-card__info 5N
+            strong  54
+        .b-scoreboard-card__td.b-scoreboard-card__td_company
+          span.b-scoreboard-card__name.d-md-none Airline
+          span.b-scoreboard-card__info Qatar Airways
+        .b-scoreboard-card__td.b-scoreboard-card__td_status
+          span.b-scoreboard-card__name.d-md-none Status
+          span.b-scoreboard-card__info Arrived
+        .b-scoreboard-card__td.b-scoreboard-card__td_terminal
+          span.b-scoreboard-card__name Terminal
+          span.b-scoreboard-card__info
+            strong  1
+        .b-scoreboard-card__td.b-scoreboard-card__td_arr.d-xl-block.d-none
+          != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '12'})
+
+  a.b-scoreboard-card(href="flight.html")
+    .b-scoreboard-card__inner
+      .b-scoreboard-card__main.row.align-items-center
+        .b-scoreboard-card__date
+          time.b-scoreboard-card__date-current 23:35
+        .b-scoreboard-card__td.b-scoreboard-card__td_city
+          .b-scoreboard-card__title Paris
+          span.b-scoreboard-card__label RE
+        .b-scoreboard-card__td.b-scoreboard-card__td_flight
+          span.b-scoreboard-card__name.d-md-none Flight
+          span.b-scoreboard-card__info 5N
+            strong  54
+        .b-scoreboard-card__td.b-scoreboard-card__td_company
+          span.b-scoreboard-card__name.d-md-none Airline
+          span.b-scoreboard-card__info Eurowings
+        .b-scoreboard-card__td.b-scoreboard-card__td_status
+          span.b-scoreboard-card__name.d-md-none Status
+          span.b-scoreboard-card__info In flight
+        .b-scoreboard-card__td.b-scoreboard-card__td_terminal
+          span.b-scoreboard-card__name Terminal
+          span.b-scoreboard-card__info
+            strong  2
+        .b-scoreboard-card__td.b-scoreboard-card__td_arr.d-xl-block.d-none
+          != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '12'})
+
+      .b-scoreboard-card__footer
+        span.b-scoreboard-card__footer-title.text-primary Flight combined :
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+
+
+
+
+mixin b-scoreboard_transfer()
+  a.b-scoreboard-card(href="flight.html")
+    .b-scoreboard-card__inner
+      .b-scoreboard-card__main.row.align-items-center
+        .b-scoreboard-card__date
+          time.b-scoreboard-card__date-current 23:35
+        .b-scoreboard-card__td.b-scoreboard-card__td_city
+          .b-scoreboard-card__title Paris
+          span.b-scoreboard-card__label RE
+        .b-scoreboard-card__td.b-scoreboard-card__td_terminal
+          span.b-scoreboard-card__name Terminal
+          span.b-scoreboard-card__info
+            strong  2
+        .b-scoreboard-card__td.b-scoreboard-card__td_flight
+          span.b-scoreboard-card__name.d-md-none Flight
+          span.b-scoreboard-card__info 5N
+            strong  54
+        .b-scoreboard-card__td.b-scoreboard-card__td_company
+          span.b-scoreboard-card__name.d-md-none Airline
+          span.b-scoreboard-card__info Eurowings
+        .b-scoreboard-card__td.b-scoreboard-card__td_status
+          span.b-scoreboard-card__name.d-md-none Status
+          span.b-scoreboard-card__info In flight
+        .b-scoreboard-card__td.b-scoreboard-card__td_arr.d-xl-block.d-none
+          != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '12'})
+
+      .b-scoreboard-card__footer
+        span.b-scoreboard-card__footer-title.text-primary Flight combined :
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+        span.b-scoreboard-card__footer-item DD
+          span.b-scoreboard-card__footer-number 2100
+        span.b-scoreboard-card__footer-item QW
+          span.b-scoreboard-card__footer-number 3245
+
+  a.b-scoreboard-card(href="flight.html")
+    .b-scoreboard-card__inner
+      .b-scoreboard-card__main.row.align-items-center
+        .b-scoreboard-card__date
+          time.b-scoreboard-card__date-current.text-primary 23:35
+          time.b-scoreboard-card__date-old 23:30
+        .b-scoreboard-card__td.b-scoreboard-card__td_city
+          .b-scoreboard-card__title Stockholm
+          span.b-scoreboard-card__label nux
+        .b-scoreboard-card__td.b-scoreboard-card__td_terminal
+          span.b-scoreboard-card__name Terminal
+          span.b-scoreboard-card__info
+            strong  1
+        .b-scoreboard-card__td.b-scoreboard-card__td_flight
+          span.b-scoreboard-card__name.d-md-none Flight
+          span.b-scoreboard-card__info 5N
+            strong  54
+        .b-scoreboard-card__td.b-scoreboard-card__td_company
+          span.b-scoreboard-card__name.d-md-none Airline
+          span.b-scoreboard-card__info Qatar Airways
+        .b-scoreboard-card__td.b-scoreboard-card__td_status
+          span.b-scoreboard-card__name.d-md-none Status
+          span.b-scoreboard-card__info Arrived
+        .b-scoreboard-card__td.b-scoreboard-card__td_arr.d-xl-block.d-none
+          != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '12'})
+
+
+
+  // end .b-scoreboard
+  |
+  |
+

@@ -1,0 +1,303 @@
+.b-scoreboard {
+  margin-top: 70px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 46px;
+  }
+}
+
+.b-scoreboard-header {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #FFF;
+  box-shadow: 0px 5px 20px rgba(98, 98, 98, 0.1);
+  border-radius: 4px;
+  padding: 4px 40px 6px;
+  align-items: center;
+  &__date {
+    width: 197px;
+    .ui-select {
+      width: 170px;
+    }
+  }
+  &__select {
+    display: flex;
+    align-items: center;
+    .ic {
+      fill:transparent;
+    }
+  }
+
+  @media (max-width:1439px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    padding-top: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-radius: 0;
+    &__date {
+      padding-left: 2px;
+    }
+    .ui-search-inner {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+
+.b-scoreboard-card {
+  font-size: 16px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding: 16px 40px 18px 61px;
+  display: block;
+  color: $main;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  &__date {
+    font-weight: 500;
+    font-size: 16px;
+    flex: 0 0 105px;
+    max-width: 105px;
+    order: 1;
+  }
+  &__date-current {
+    display: block;
+  }
+  &__date-old {
+    display: block;
+    text-decoration-line: line-through;
+    color: rgba(12, 35, 64, 0.4);
+  }
+  &__inner {
+  }
+  &__info {
+    padding-left: 5px;
+  }
+  &__main {
+  }
+  &__td {
+    padding: 6px 20px 5px 0;
+    .ic {
+      stroke: rgba(12, 35, 64, 0.4);
+    }
+    &_city {
+      flex: 0 0 calc(100% - 1073px);
+      max-width: calc(100% - 1073px);
+      order: 2;
+    }
+    &_terminal {
+      flex: 0 0 152px;
+      max-width: 152px;
+      order: 3;
+    }
+    &_flight {
+      flex: 0 0 131px;
+      max-width: 131px;
+      order: 4;
+      .b-scoreboard-card__info {
+        strong {
+          margin-left: 5px;
+        }
+      }
+    }
+    &_company {
+      flex: 0 0 319px;
+      max-width: 319px;
+      order: 5;
+    }
+    &_status {
+      flex: 0 0 326px;
+      max-width: 326px;
+      order: 6;
+    }
+    &_arr {
+      order: 7;
+    }
+  }
+  &__name {}
+  &__title {
+    font-family: Geometria;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.25;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  &__label {
+    font-family: Geometria;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    border: 1px solid rgba(12, 35, 64, 0.2);
+    padding: 4px 7px 3px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: 30%;
+    text-transform: uppercase;
+  }
+  &__footer {
+    border-top: 1px solid rgba(12, 35, 64, 0.2);
+    margin-top: 16px;
+    padding-top: 18px;
+    font-size: 14px;
+    margin-left: 86px;
+  }
+  &__footer-title {
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  &__footer-item {
+    padding-right: 15px;
+    margin-right: 14px;
+    position: relative;
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: rgba(12, 35, 64, 0.2);
+        width: 1px;
+        height: 17px;
+      }
+    }
+  }
+  &__footer-number {
+    font-weight: bold;
+    margin-left: 7px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $main;
+    box-shadow: 1px 4px 44px rgba(98, 98, 98, 0.24);
+  }
+
+  &:hover & {
+    &__td {
+      .ic {
+        stroke: $primary;
+      }
+    }
+  }
+
+
+  @media (max-width:1439px) {
+    padding-left: 32px;
+    padding-right: 13px;
+    &__main {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__date {
+      flex: 0 0 88px;
+      max-width: 88px;
+    }
+    &__td {
+      &_city {
+        flex: 0 0 calc(100% - 771px);
+        max-width: calc(100% - 771px);
+      }
+      &_terminal {
+        flex: 0 0 129px;
+        max-width: 129px;
+      }
+      &_flight {
+        flex: 0 0 110px;
+        max-width: 110px;
+      }
+      &_company {
+        flex: 0 0 200px;
+        max-width: 200px;
+      }
+      &_status {
+        flex: 0 0 206px;
+        max-width: 206px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    position: relative;
+    &__main {
+      display: block;
+    }
+    &__td {
+      max-width: 100%;
+      display: flex;
+      padding-right: 0;
+      padding-top: 5px;
+      padding-bottom: 0;
+    }
+    &__name {
+      width: 121px;
+    }
+    &__info {
+      width: 50%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &__title {
+      font-size: 20px;
+      padding-top: 12px;
+      padding-bottom: 13px;
+    }
+    &__date {
+      font-size: 12px;
+      display: flex;
+    }
+    &__date-current {
+      font-weight: 600;
+      display: inline-block;
+      order: 2;
+    }
+    &__date-old {
+      display: inline-block;
+      margin-right: 6px;
+    }
+    &__footer {
+      margin-left: 0;
+      margin-top: 14px;
+      padding-top: 15px;
+      font-size: 11px;
+      margin-right: -20px;
+      margin-bottom: -5px;
+    }
+    &__footer-title {
+      display: block;
+      margin-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    &__footer-number {
+      margin-left: 4px;
+    }
+    &__footer-item {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 6px;
+      padding-right: 16px;
+      &:not(:last-child):after {
+        display: none;
+      }
+    }
+    &__label {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  }
+}

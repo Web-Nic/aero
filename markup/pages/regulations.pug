@@ -1,0 +1,41 @@
+extends _template.pug
+
+include ../components/b-title-page/b-title-page
+include ../components/b-regulations/b-regulations
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item
+          a(href="#") information
+        li.breadcrumb-item.active(aria-current="page") rules
+
+
+
+  .b-title-page.b-title-page_mod-a.b-title-page_sm-bg-2
+    .b-title-page__wrap.b-title-page__wrap_over_list.align-items-end
+      .container
+        .b-title-page__inner.align-items-end
+          .b-title-page__list-wrap
+            ul.b-title-page__list.b-title-page__list_sm.nav#faqTab(role="tablist")
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link.active#regulations-tab(data-toggle="tab" href="#regulations" role="tab" aria-controls="regulations" aria-selected="true") Rules
+              li.b-title-page__item.nav-item
+                a.b-title-page__link.nav-link#help-tab(data-toggle="tab" href="#help" role="tab" aria-controls="help" aria-selected="false") Need help
+
+  main.l-main
+
+    +b-regulations()

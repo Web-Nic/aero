@@ -1,0 +1,16 @@
+.b-services {
+  &__inner {
+    margin-top: 30px;
+    margin-bottom: -40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 20px;
+    padding-top: 32px;
+    &__inner {
+      margin-bottom: 0;
+      margin-top: 22px;
+    }
+  }
+}
+

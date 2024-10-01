@@ -1,0 +1,22 @@
+mixin b-modal-warning()
+
+  .ui-modal.modal.fade#modalWarning(tabindex="-1" role="dialog" aria-labelledby="modalWarningLabel" aria-hidden="true"  data-backdrop="static")
+    .modal-dialog.modal-dialog-centered(role="document")
+      .b-modal-warning.modal-content
+        .modal-header
+          .modal-title#modalWarningLabel Attention!
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true") &times;
+        .modal-body For questions regarding flights to Georgia, please contact the Georgian Airways representative office, Aksima Agency, tel.:
+          |
+          |
+          a.b-modal-warning__link(href="tel:1234567890") 1(234)56-78-90
+
+        .modal-footer
+          a.btn.btn-primary(href="#") More details
+          button.btn.btn-no-bg.mt-4.mt-sm-0(type="button" data-dismiss="modal") Close message
+
+  // end .b-modal-warning
+  |
+  |
+

@@ -1,0 +1,27 @@
+.b-press {
+  &__note {
+    font-family: Geometria;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    margin-left: 40px;
+  }
+  &__more {
+    font-size: 20px;
+    padding: 17px 38px;
+  }
+
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 26px;
+    &__note {
+      display: none;
+    }
+    &__more {
+      font-size: 16px;
+    }
+    .ui-title-inner {
+      margin-bottom: 27px;
+    }
+  }
+}

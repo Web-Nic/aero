@@ -1,0 +1,180 @@
+mixin b-schedule()
+
+  .b-schedule
+    .container
+      .ui-list-links__container
+        .ui-list-links__wrap
+          ul.ui-list-links.ui-list-links_in-header.list-unstyled
+            li.ui-list-links__item
+              a.ui-list-links__link.active(href="#") All directions
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Domestic
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") International
+            li.ui-list-links__item.ui-list-links__item-external
+              a.ui-list-links__link(href="#")
+                != pugHelpers.Icon.call(locals, {iconName: 'calendar', className: 'ic', iconWidth: '32', iconHeight: '32'})
+                | Online scoreboard
+
+    .section-area.bg-gray.b-schedule__inner
+      .container
+
+        .b-schedule-sort
+          form.b-schedule-sort__search.d-sm-none
+            != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'ic stroke-primary', iconWidth: '16', iconHeight: '16'})
+            input.b-schedule-sort__input(type="text" placeholder="Поиск")
+
+          != pugHelpers.Icon.call(locals, {iconName: 'filter', className: 'ic', iconWidth: '18', iconHeight: '18'})
+          button.b-schedule-sort__trigger.js-sort-trigger.d-sm-none(type="button" data-toggle="collapse" data-target="#collapseSort" aria-expanded="false" aria-controls="collapseSort") configure sorting
+          ul.b-schedule-sort__list.list-unstyled#collapseSort
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link.active(href="#") a-z
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") a
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") b
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") c
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") d
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") e
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") f
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") g
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") h
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") i
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") j
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") k
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") l
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") m
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") n
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") o
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") p
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") q
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") r
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") s
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") t
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") u
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") v
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") w
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") x
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") y
+            li.b-schedule-sort__item
+              a.b-schedule-sort__link(href="#") z
+
+        .b-card-2-group
+          .grid(data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 10, "horizontalOrder": true }')
+
+            .b-card-2.grid-item
+              .b-card-2__inner
+                .b-card-2__header
+                  .b-card-2__title A
+                ul.b-card-2__list.list-unstyled
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Addis Ababa
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Acapulco
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Ankara
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Atlanta
+
+
+            .b-card-2.grid-item
+              .b-card-2__inner
+                .b-card-2__header
+                  .b-card-2__title B
+                ul.b-card-2__list.list-unstyled
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Berlin
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Berne
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Buenos Aires
+
+            .b-card-2.grid-item
+              .b-card-2__inner
+                .b-card-2__header
+                  .b-card-2__title D
+                ul.b-card-2__list.list-unstyled
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Dorpat
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Dubai
+
+
+            .b-card-2.grid-item
+              .b-card-2__inner
+                .b-card-2__header
+                  .b-card-2__title E
+                ul.b-card-2__list.list-unstyled
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Berlin
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Berne
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Buenos Aires
+
+
+            .b-card-2.grid-item
+              .b-card-2__inner
+                .b-card-2__header
+                  .b-card-2__title F
+                ul.b-card-2__list.list-unstyled
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Addis Ababa
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Acapulco
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Ankara
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Atlanta
+
+
+            .b-card-2.grid-item
+              .b-card-2__inner
+                .b-card-2__header
+                  .b-card-2__title G
+                ul.b-card-2__list.list-unstyled
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Ankara
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Atlanta
+
+
+            .b-card-2.grid-item
+              .b-card-2__inner
+                .b-card-2__header
+                  .b-card-2__title H
+                ul.b-card-2__list.list-unstyled
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Berlin
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Berne
+                  li.b-card-2__item
+                    a.b-card-2__link(href="#") Buenos Aires
+
+  // end .b-schedule
+  |
+  |
+

@@ -1,0 +1,37 @@
+extends _template.pug
+
+include ../components/b-title-page/b-title-page
+include ../components/b-flight/b-flight
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item
+          a(href="scoreboard.html") online scoreboard
+        li.breadcrumb-item.active(aria-current="page") departure
+
+
+  .b-title-page
+    .b-title-page__wrap
+      .container
+        .b-title-page__inner.align-items-center
+          span.b-title-page__label LED
+          h1.b-title-page__name Paris
+
+
+  main.l-main
+
+    +b-flight()

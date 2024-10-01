@@ -1,0 +1,63 @@
+mixin b-search()
+
+  .b-search
+    .container
+      .ui-list-links__container
+        .ui-list-links__wrap
+          ul.ui-list-links.ui-list-links_in-header.list-unstyled
+            li.ui-list-links__item
+              a.ui-list-links__link.active(href="#") All results : 12
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Information : 4
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") For partners : 1
+            li.ui-list-links__item
+              a.ui-list-links__link(href="#") Publications : 2
+
+    .b-search__inner.section-area.bg-gray
+      .container
+        .row
+          .col-xl-7
+            section.b-search__section
+              h2.ui-title-inner Information
+              ul.b-search-list.list-unstyled
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") Lost child
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") Flight delayed or canceled
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") Lost or damaged luggage
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") Forgot your things on the plane or airport
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") Extortion
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") Health center
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+
+            section.b-search__section
+              h2.ui-title-inner For partners
+              ul.b-search-list.list-unstyled
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") For tenants
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+
+            section.b-search__section
+              h2.ui-title-inner Publications
+              ul.b-search-list.list-unstyled
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") Rules for passengers: changes to the rules of transportation
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+                li.b-search-list__item
+                  a.b-search-list__link(href="#") Inspectors will monitor compliance with the new rules of conduct
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+
+  // end .b-search
+  |
+  |
+

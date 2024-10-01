@@ -1,0 +1,33 @@
+mixin b-card()
+
+  a.b-card(href="#" class!=attributes.class)
+    span.b-card__label
+      != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'ic', iconWidth: '24', iconHeight: '24'})
+    .b-card__title= title
+    .b-card__info Подробнее
+      != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+
+
+
+
+  // end .b-card
+  |
+  |
+
+
+mixin b-card-lg()
+
+  .b-card-lg(class!=attributes.class)
+    a.b-card-lg__inner(href="#")
+      picture
+        source(srcset="assets/media/content/b-card/label/1.webp" type="image/webp")
+        img.b-card__label(src="assets/media/content/b-card/label/1.png", alt="S7" loading="lazy" decoding="async")
+      .b-card__title= title
+      .b-card__info= info
+
+
+
+  // end .b-card
+  |
+  |
+

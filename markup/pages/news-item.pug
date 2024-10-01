@@ -1,0 +1,33 @@
+extends _template.pug
+
+include ../components/b-title-page/b-title-page
+include ../components/b-news-item/b-news-item
+include ../components/b-news/b-news
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+
+  .container
+    nav(aria-label="breadcrumb")
+      ol.breadcrumb
+        li.breadcrumb-item
+          a(href="/") Home
+        li.breadcrumb-item
+          a(href="#") About company
+        li.breadcrumb-item
+          a(href="#") press center
+        li.breadcrumb-item.active(aria-current="page") news
+
+
+
+  main.l-main
+
+    +b-news-item()

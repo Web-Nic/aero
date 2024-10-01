@@ -1,0 +1,61 @@
+mixin b-services-item()
+
+  .b-services-item.section-area.bg-gray-light
+    .container
+      .row.justify-content-between
+        .col-xl-7
+          .b-services-item__main
+            .b-services-item__slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+              .b-services-item__img
+                picture
+                  source(srcset="assets/media/content/b-services-item/1.webp" type="image/webp")
+                  img.img-fluid(src="assets/media/content/b-services-item/1.jpg", alt="image" loading="lazy" decoding="async")
+              .b-services-item__img
+                picture
+                  source(srcset="assets/media/content/b-services-item/1.webp" type="image/webp")
+                  img.img-fluid(src="assets/media/content/b-services-item/1.jpg", alt="image" loading="lazy" decoding="async")
+              .b-services-item__img
+                picture
+                  source(srcset="assets/media/content/b-services-item/1.webp" type="image/webp")
+                  img.img-fluid(src="assets/media/content/b-services-item/1.jpg", alt="image" loading="lazy" decoding="async")
+
+        .col-xl-3
+          aside.b-card-links
+            .b-card-links__item
+              .b-card-links__title Terminal №2
+              a.b-card-links__info(href="#") Show on diagram
+            .b-card-links__item
+              .b-card-links__title Around the clock
+              .b-card-links__info Working hours
+            .b-card-links__item
+              a.b-card-links__title(href="tel:+1234567890") +1 (234) 56 78 90
+              .b-card-links__info Phone
+            .b-card-links__item
+              a.b-card-links__title(href="shoko.com") сhoсolate.com
+              .b-card-links__info Website
+
+            .b-card-links__footer
+              ul.b-card-links__soc.list-unstyled
+                li.b-card-links__soc-item
+                  a.b-card-links__soc-link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'soc-fb', className: 'ic', iconWidth: '9', iconHeight: '16'})
+                li.b-card-links__soc-item
+                  a.b-card-links__soc-link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'soc-tw', className: 'ic', iconWidth: '16', iconHeight: '14'})
+                li.b-card-links__soc-item
+                  a.b-card-links__soc-link(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'soc-inst', className: 'ic', iconWidth: '16', iconHeight: '16'})
+
+      .row
+        .col-xl-7
+          .lead The history of World of Chocolate coffee houses goes back to the legendary World of Chocolate cafe, the only place where for several decades guests were offered delicious delicacies and drinks: hot chocolate and legendary pancakes filled with chocolate, raisins and nuts.
+
+      .row
+        .col-xl-5
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo           consequat.
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  // end .b-services-item
+  |
+  |
+

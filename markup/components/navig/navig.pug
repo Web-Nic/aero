@@ -1,0 +1,106 @@
+mixin navig()
+  .collapse.navbar-collapse#navbarNav
+    .header__mobile-group.d-lg-none.d-block
+      .container
+        .row
+          .col-sm
+            button.header-top__btn.header-top__btn_search(type="button")
+              != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'ic', iconWidth: '24', iconHeight: '24'})
+            button.header-top__btn.header-top__btn_accessibility(type="button")
+              != pugHelpers.Icon.call(locals, {iconName: 'accessibility', className: 'ic', iconWidth: '20', iconHeight: '20'})
+
+            .header-language.header-top__btn.dropdown
+              a.header-language__link.dropdown-toggle(href="#" role="button" id="dropdownLangLinkMob" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                img.header-language__img.img-fluid(src="assets/media/general/language-en.svg", alt="EN")
+                span.header-language__name EN
+                != pugHelpers.Icon.call(locals, {iconName: 'arr-down', className: 'ic', iconWidth: '10', iconHeight: '7'})
+
+              .header-language__menu.dropdown-menu(aria-labelledby="dropdownLangLinkMob")
+                a.header-language__item.header-language__link.dropdown-item(href="#")
+                  img.header-language__img.img-fluid(src="assets/media/general/language-en.svg", alt="FR")
+                  span.header-language__name FR
+
+          .col-sm-auto
+            a.header__phone(href="tel:+1234567890") +1 (234) 56-78-90
+            a.header__phone(href="tel:+1234567890") +1 (234) 56-78-90
+
+    .container
+      .row.justify-content-between
+        .col-xl-auto
+          ul.main-menu.navbar-nav.list-num
+            li.main-menu__item
+              a.main-menu__link(href="scoreboard.html") Online scoreboard
+                span.sr-only (current)
+            li.main-menu__item
+              a.main-menu__link(href="schedule.html") Seasonal schedule
+            li.main-menu__item
+              a.main-menu__link(href="services.html") Services
+            li.main-menu__item
+              a.main-menu__link(href="regulations.html") Information
+            li.main-menu__item
+              a.main-menu__link(href="contacts.html") Contacts
+            li.main-menu__item
+              a.main-menu__link.main-menu__link_sm(href="about.html") About the airport
+            li.main-menu__item
+              a.main-menu__link.main-menu__link_sm(href="page.html") For partners
+            li.main-menu__item
+              a.main-menu__link.main-menu__link_sm(href="news.html") Press center
+
+        .col-xl-6
+          .header-nav__cards
+            .row.row_sm-mrg
+              .col-md-6
+                a.header-card(href="services-item.html")
+                  span.header-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'tickets-2', className: 'ic', iconWidth: '40', iconHeight: '40'})
+                  .header-card__title To buy a ticket
+              .col-md-6
+                a.header-card(href="services-item.html")
+                  span.header-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'parking-2', className: 'ic', iconWidth: '40', iconHeight: '40'})
+                  .header-card__title Parking
+              .col-md-6
+                a.header-card(href="services-item.html")
+                  span.header-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'map-2', className: 'ic', iconWidth: '40', iconHeight: '40'})
+                  .header-card__title Airline representative offices
+              .col-md-6
+                a.header-card(href="services-item.html")
+                  span.header-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'map-2', className: 'ic', iconWidth: '40', iconHeight: '40'})
+                  .header-card__title How to get there
+              .col-md-6
+                a.header-card(href="services-item.html")
+                  span.header-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'map-2', className: 'ic', iconWidth: '40', iconHeight: '40'})
+                  .header-card__title Airport map
+              .col-md-6
+                a.header-card(href="feedback.html")
+                  span.header-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'doc', className: 'ic', iconWidth: '40', iconHeight: '40'})
+                  .header-card__title Feedback
+              .col-md-6
+                a.header-card(href="services-item.html")
+                  span.header-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'earth', className: 'ic', iconWidth: '40', iconHeight: '40'})
+                  .header-card__title Online registration
+              .col-md-6
+                a.header-card(href="services-item.html")
+                  span.header-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'doc', className: 'ic', iconWidth: '40', iconHeight: '40'})
+                  .header-card__title Secret Passenger
+
+    .container
+      .b-main-links
+        a.b-main-links__item(href="scoreboard.html")
+          .b-main-links__title Departure
+          .b-main-links__info Departing and arriving
+        a.b-main-links__item(href="scoreboard_arrival.html")
+          .b-main-links__title Arrival
+          .b-main-links__info Arrivals and greeters
+        a.b-main-links__item(href="scoreboard_transfer.html")
+          .b-main-links__title Transfer and transit
+          .b-main-links__info For those making a transfer
+  // end .navig
+  |
+  |

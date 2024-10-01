@@ -1,0 +1,47 @@
+.b-feedback {
+  &__submit {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  &__radio-group {
+    margin-bottom: 33px;
+  }
+  .ui-title-inner {
+    margin-bottom: 62px;
+    margin-top: -4px;
+  }
+  .ui-select-2 {
+    margin-top: 22px;
+  }
+
+  @media (max-width:1599px) {
+    &__radio {
+      display: block;
+      margin-bottom: 12px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 15px;
+    &__submit {
+      font-size: 16px;
+      padding: 16px 53px 18px;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+    &__radio-group {
+      margin-bottom: 20px;
+    }
+    .ui-title-inner {
+      margin-bottom: 32px;
+    }
+    .ui-label {
+      margin-bottom: 11px;
+    }
+    .ui-select-2 {
+      margin-top: 8px;
+    }
+  }
+}

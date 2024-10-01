@@ -1,0 +1,325 @@
+extends _template.pug
+
+include ../components/b-main/b-main
+include ../components/b-news/b-news
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('')
+
+
+block content
+  main.l-main
+    +b-main()
+
+    section.section-default.bg-gray
+      .container
+        .ui-title-wrap
+          .row.align-items-baseline
+            .col-xl
+              h2.ui-title Offers for
+                span.text-primary  passengers
+            .col-xl-auto
+              .ui-list-links__container.ui-list-links__container_gray
+                .ui-list-links__wrap
+                  ul.ui-list-links.list-unstyled
+                    li.ui-list-links__item
+                      a.ui-list-links__link(href="scoreboard.html") Flight board
+                    li.ui-list-links__item
+                      a.ui-list-links__link(href="services-item.html") Parking
+                    li.ui-list-links__item
+                      a.ui-list-links__link(href="services-item.html") Airport map
+                    li.ui-list-links__item.ui-list-links__item-main
+                      a.ui-list-links__link(href="services.html")
+                        != pugHelpers.Icon.call(locals, {iconName: 'burger', className: 'ic', iconWidth: '20', iconHeight: '20'})
+                        | All services
+
+        .row
+          .col-xl-6
+            .row
+              .col-md-6
+                a.b-card(href="services-item.html")
+                  span.b-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'tickets', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                  .b-card__title Buy an air ticket
+                  .b-card__info More details
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+              .col-md-6
+                a.b-card(href="services-item.html")
+                  span.b-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'ic', iconWidth: '60', iconHeight: '57.24'})
+                  .b-card__title VIP service
+                  .b-card__info More details
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+              .col-md-6
+                a.b-card(href="services-item.html")
+                  span.b-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'disabled-sign', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                  .b-card__title For passengers with&nbsp;FEV
+                  .b-card__info More details
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+              .col-md-6
+                a.b-card(href="services-item.html")
+                  span.b-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'parking', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                  .b-card__title Parking
+                  .b-card__info More details
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+              .col-md-6
+                a.b-card(href="services-item.html")
+                  span.b-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'click', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                  .b-card__title Online registration
+                  .b-card__info More details
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+              .col-md-6
+                a.b-card(href="services-item.html")
+                  span.b-card__label
+                    != pugHelpers.Icon.call(locals, {iconName: 'case', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                  .b-card__title Work at the airport
+                  .b-card__info More details
+                    != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+
+          .col-xl-6
+            .row.flex-xl-wrap-reverse
+              .col-12
+                .row
+                  .col-md-6
+                    a.b-card(href="services-item.html")
+                      span.b-card__label
+                        != pugHelpers.Icon.call(locals, {iconName: 'package', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                      .b-card__title Freight transportation
+                      .b-card__info More details
+                        != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+                  .col-md-6
+                    a.b-card(href="services-item.html")
+                      span.b-card__label
+                        != pugHelpers.Icon.call(locals, {iconName: 'spy', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                      .b-card__title Secret Passenger
+                      .b-card__info More details
+                        != pugHelpers.Icon.call(locals, {iconName: 'arr-right', className: 'ic', iconWidth: '18', iconHeight: '20'})
+
+              .col-12
+                .b-card-slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+                  .b-card-lg
+                    a.b-card-lg__inner(href="#")
+                      img.b-card-lg__label(src="assets/media/content/b-card/label/1.png", alt="S7")
+                      .b-card-lg__img
+                        img.img-fluid(src="assets/media/content/b-card/500x490/1.jpg", alt="photo")
+                      .b-card-lg__wrap
+                        .b-card-lg__title From Cairo
+                          span.text-primary  to&nbsp;Turkey<br>
+                          |  on weekend
+                        .b-card-lg__subtitle A journey accessible to everyone
+                        .b-card-lg__info
+                  .b-card-lg
+                    a.b-card-lg__inner(href="#")
+                      img.b-card-lg__label(src="assets/media/content/b-card/label/1.png", alt="S7")
+                      .b-card-lg__img
+                        img.img-fluid(src="assets/media/content/b-card/500x490/1.jpg", alt="photo")
+                      .b-card-lg__wrap
+                        .b-card-lg__title From Cairo
+                          span.text-primary  to&nbsp;Turkey<br>
+                          |  on weekend
+                        .b-card-lg__subtitle A journey accessible to everyone
+                        .b-card-lg__info
+                  .b-card-lg
+                    a.b-card-lg__inner(href="#")
+                      img.b-card-lg__label(src="assets/media/content/b-card/label/1.png", alt="S7")
+                      .b-card-lg__img
+                        img.img-fluid(src="assets/media/content/b-card/500x490/1.jpg", alt="photo")
+                      .b-card-lg__wrap
+                        .b-card-lg__title From Cairo
+                          span.text-primary  to&nbsp;Turkey<br>
+                          |  on weekend
+                        .b-card-lg__subtitle A journey accessible to everyone
+                        .b-card-lg__info
+
+
+    .section-bnrs.bg-gray
+      .container
+        .row
+          .col-lg-6
+            .b-bnr-slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+              a.b-bnr(href="#")
+                .b-bnr__wrap
+                  picture
+                    source(srcset="assets/media/content/b-bnr/1-mob.png" media="(max-width: 767px)")
+                    img.b-bnr__img.img-scale(src="assets/media/content/b-bnr/1.png", alt="photo")
+
+                  span.b-bnr__label Parking
+                  .b-bnr__inner
+                    .row
+                      .col-xl-6
+                        .b-bnr__title
+                          span.text-primary Parking $1<br>
+                          |  in 30 min.
+                        .b-bnr__info Day - 5$
+              a.b-bnr(href="#")
+                .b-bnr__wrap
+                  picture
+                    source(srcset="assets/media/content/b-bnr/1-mob.png" media="(max-width: 767px)")
+                    img.b-bnr__img.img-scale(src="assets/media/content/b-bnr/1.png", alt="photo")
+
+                  span.b-bnr__label Parking
+                  .b-bnr__inner
+                    .row
+                      .col-xl-6
+                        .b-bnr__title
+                          span.text-primary Parking $1<br>
+                          |  in 30 min.
+                        .b-bnr__info Day - 5$
+              a.b-bnr(href="#")
+                .b-bnr__wrap
+                  picture
+                    source(srcset="assets/media/content/b-bnr/1-mob.png" media="(max-width: 767px)")
+                    img.b-bnr__img.img-scale(src="assets/media/content/b-bnr/1.png", alt="photo")
+
+                  span.b-bnr__label Parking
+                  .b-bnr__inner
+                    .row
+                      .col-xl-6
+                        .b-bnr__title
+                          span.text-primary Parking $1<br>
+                          |  in 30 min.
+                        .b-bnr__info Day - 5$
+
+
+          .col-lg-6
+            .b-bnr-slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+              a.b-bnr.b-bnr_mod-1(href="#")
+                .b-bnr__wrap
+                  picture
+                    source(srcset="assets/media/content/b-bnr/2-mob.png" media="(max-width: 767px)")
+                    img.b-bnr__img.img-scale(src="assets/media/content/b-bnr/2.png", alt="photo")
+                  img.b-bnr__item.img-scale(src="assets/media/content/b-bnr/item-1.png", alt="photo")
+                  span.b-bnr__label New route
+                  .b-bnr__inner
+                    .row
+                      .col-xl-6
+                        .b-bnr__title From Cairo
+                          span.text-primary  in Paris
+                        .b-bnr__info Two flights per week
+              a.b-bnr.b-bnr_mod-1(href="#")
+                .b-bnr__wrap
+                  picture
+                    source(srcset="assets/media/content/b-bnr/2-mob.png" media="(max-width: 767px)")
+                    img.b-bnr__img.img-scale(src="assets/media/content/b-bnr/2.png", alt="photo")
+                  img.b-bnr__item.img-scale(src="assets/media/content/b-bnr/item-1.png", alt="photo")
+                  span.b-bnr__label New route
+                  .b-bnr__inner
+                    .row
+                      .col-xl-6
+                        .b-bnr__title From Cairo
+                          span.text-primary  in Paris
+                        .b-bnr__info Two flights per week
+              a.b-bnr.b-bnr_mod-1(href="#")
+                .b-bnr__wrap
+                  picture
+                    source(srcset="assets/media/content/b-bnr/2-mob.png" media="(max-width: 767px)")
+                    img.b-bnr__img.img-scale(src="assets/media/content/b-bnr/2.png", alt="photo")
+                  img.b-bnr__item.img-scale(src="assets/media/content/b-bnr/item-1.png", alt="photo")
+                  span.b-bnr__label New route
+                  .b-bnr__inner
+                    .row
+                      .col-xl-6
+                        .b-bnr__title From Cairo
+                          span.text-primary  in Paris
+                        .b-bnr__info Two flights per week
+
+
+
+    section.section-news.section-default.bg-white
+      .container
+        .ui-title-wrap
+          .row.align-items-baseline
+            .col-xl
+              h2.ui-title News
+            .col-xl-auto
+              .ui-list-links__container
+                .ui-list-links__wrap
+                  ul.ui-list-links.list-unstyled
+                    li.ui-list-links__item
+                      a.ui-list-links__link(href="news-item-anim.html") Museum
+                    li.ui-list-links__item
+                      a.ui-list-links__link(href="news.html") Press center
+                    li.ui-list-links__item.ui-list-links__item-main
+                      a.ui-list-links__link(href="news.html")
+                        != pugHelpers.Icon.call(locals, {iconName: 'burger', className: 'ic', iconWidth: '20', iconHeight: '20'})
+                        | All news
+
+        .row.justify-content-between
+          .col-auto
+            +b-news('Cairo Airport has been tested for accessibility for people with disabilities ', '2 Apr. 2021')
+          .col-auto
+            +b-news('Direct flights to Vienna open from Cairo airport ', '12 Apr. 2021')
+          .col-auto
+            +b-news('Cairo airport welcomed the first flight of Georgian Airways ', '7 Apr. 2021')
+          .col-auto
+            +b-news('Cairo airport welcomed the first flight of Georgian Airways ', '25 Apr. 2021')
+
+
+    .section
+      .row.no-gutters
+        .col-lg-6
+          .b-card-bg-slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+            a.b-card-bg(href="#")
+              img.b-card-bg__img.img-scale(src="assets/media/content/b-card/960x1040/1.jpg", alt="photo")
+              .b-card-bg__inner
+                .b-card-bg__title Conquer the beauty
+                  span.text-primary  the Sierra Madre
+                .b-card-bg__footer
+                  .b-card-bg__info Domestic destinations
+                  span.b-card-bg__link Details
+            a.b-card-bg(href="#")
+              img.b-card-bg__img.img-scale(src="assets/media/content/b-card/960x1040/1.jpg", alt="photo")
+              .b-card-bg__inner
+                .b-card-bg__title Conquer the beauty
+                  span.text-primary  the Sierra Madre
+                .b-card-bg__footer
+                  .b-card-bg__info Domestic destinations
+                  span.b-card-bg__link Details
+            a.b-card-bg(href="#")
+              img.b-card-bg__img.img-scale(src="assets/media/content/b-card/960x1040/1.jpg", alt="photo")
+              .b-card-bg__inner
+                .b-card-bg__title Conquer the beauty
+                  span.text-primary  the Sierra Madre
+                .b-card-bg__footer
+                  .b-card-bg__info Domestic destinations
+                  span.b-card-bg__link Details
+        .col-lg-6
+          .b-card-bg-slider.js-slider(data-slick='{"arrows": false, "dots": true}')
+            a.b-card-bg(href="#")
+              img.b-card-bg__img.img-scale(src="assets/media/content/b-card/960x1040/2.jpg", alt="photo")
+              .b-card-bg__inner
+                .b-card-bg__title Find harmony in the&nbsp;sun
+                  span.text-primary  GOA
+                .b-card-bg__footer
+                  .b-card-bg__info External destinations
+                  span.b-card-bg__link Details
+            a.b-card-bg(href="#")
+              img.b-card-bg__img.img-scale(src="assets/media/content/b-card/960x1040/2.jpg", alt="photo")
+              .b-card-bg__inner
+                .b-card-bg__title Find harmony in the&nbsp;sun
+                  span.text-primary  GOA
+                .b-card-bg__footer
+                  .b-card-bg__info External destinations
+                  span.b-card-bg__link Details
+            a.b-card-bg(href="#")
+              img.b-card-bg__img.img-scale(src="assets/media/content/b-card/960x1040/2.jpg", alt="photo")
+              .b-card-bg__inner
+                .b-card-bg__title Find harmony in the&nbsp;sun
+                  span.text-primary  GOA
+                .b-card-bg__footer
+                  .b-card-bg__info External destinations
+                  span.b-card-bg__link Details
+
+
+
+    // .spinner-box
+    //   .circle-border
+    //     .circle-core

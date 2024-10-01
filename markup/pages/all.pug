@@ -1,0 +1,56 @@
+extends _template.pug
+
+block head
+  head
+    +head(head.home)
+
+block header
+  +header('')
+
+block content
+
+  main.l-content
+    .container
+      .section-default.text-center.py-5
+        h2.pt-4 Pages
+        ol.list-page(style="text-align: left;")
+          li
+            a.text-success(href="index.html" target="_blank") Home
+          li
+            a.text-success(href="scoreboard.html" target="_blank") Online scoreboard
+          li
+            a.text-success(href="scoreboard_arrival.html" target="_blank") Arrival
+          li
+            a.text-success(href="scoreboard_transfer.html" target="_blank") Transfer and transit
+          li
+            a.text-success(href="flight.html" target="_blank") Flight
+          li
+            a.text-success(href="flight-cancel.html" target="_blank") Flight canceled
+          li
+            a.text-success(href="schedule.html" target="_blank") Schedule
+          li
+            a.text-success(href="card-sez.html" target="_blank")  Card - seasonal schedule
+          li
+            a.text-success(href="services.html" target="_blank") Services
+          li
+            a.text-success(href="services-item.html" target="_blank") Service page
+          li
+            a.text-success(href="contacts.html" target="_blank") Contacts
+          li
+            a.text-success(href="search.html" target="_blank") Search
+          li
+            a.text-success(href="search-full.html" target="_blank") Search with content
+          li
+            a.text-success(href="regulations.html" target="_blank") Regulations
+          li
+            a.text-success(href="feedback.html" target="_blank") Feedback
+          li
+            a.text-success(href="news.html" target="_blank") News
+          li
+            a.text-success(href="news-item.html" target="_blank") News page
+          li
+            a.text-success(href="news-item-anim.html" target="_blank") News page animation
+          li
+            a.text-success(href="page.html" target="_blank") Page
+          li
+            a.text-success(href="about.html" target="_blank") About
